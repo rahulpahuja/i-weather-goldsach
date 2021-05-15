@@ -7,9 +7,17 @@
 
 import UIKit
 
-class SearchViewController:UIViewController{
+class SearchViewController:UIViewController,UISearchBarDelegate{
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        var cityName = searchBar.text?.lowercased()
+        
+        //Call API here
     }
 }

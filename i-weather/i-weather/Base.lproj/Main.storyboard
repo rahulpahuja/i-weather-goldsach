@@ -31,10 +31,27 @@
                     <view key="view" contentMode="scaleToFill" id="qrs-S6-neR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lym-0L-DfE">
+                                <rect key="frame" x="12" y="48" width="390" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="u8f-Ue-sLB"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="stg-A4-a8j"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="stg-A4-a8j" firstAttribute="trailing" secondItem="Lym-0L-DfE" secondAttribute="trailing" constant="12" id="Hkl-0R-t25"/>
+                            <constraint firstItem="Lym-0L-DfE" firstAttribute="top" secondItem="qrs-S6-neR" secondAttribute="top" constant="48" id="gIZ-wM-3CN"/>
+                            <constraint firstItem="Lym-0L-DfE" firstAttribute="leading" secondItem="qrs-S6-neR" secondAttribute="leading" constant="12" id="snV-I5-4q1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="g2Y-KP-NMS"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Lym-0L-DfE" id="Jsg-68-FYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BeC-fP-cQ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
