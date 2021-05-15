@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="9K0-Q2-hUZ">
             <objects>
-                <viewController id="yo2-Sl-tRT" sceneMemberID="viewController">
+                <viewController id="yo2-Sl-tRT" customClass="FavouriteViewController" customModule="i_weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pPU-gP-tim">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="5dS-r1-x3q">
             <objects>
-                <viewController id="3OF-hD-s9g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3OF-hD-s9g" customClass="SearchViewController" customModule="i_weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qrs-S6-neR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
