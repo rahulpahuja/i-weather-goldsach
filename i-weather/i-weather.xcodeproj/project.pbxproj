@@ -17,6 +17,7 @@
 		A4C5F64F26506A5B007A948E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5F64E26506A5B007A948E /* SearchViewController.swift */; };
 		A4C5F65326506ACA007A948E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5F65226506ACA007A948E /* FavouriteViewController.swift */; };
 		A4C5F65F26506E97007A948E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5F65E26506E97007A948E /* Constants.swift */; };
+		A4C5F66226507045007A948E /* WeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5F66126507045007A948E /* WeatherFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A4C5F64E26506A5B007A948E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A4C5F65226506ACA007A948E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		A4C5F65E26506E97007A948E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A4C5F66126507045007A948E /* WeatherFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFetcher.swift; sourceTree = "<group>"; };
 		DCBFD82BD48181A51161CBAE /* Pods_i_weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_i_weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				A4C5F64E26506A5B007A948E /* SearchViewController.swift */,
 				A4C5F65226506ACA007A948E /* FavouriteViewController.swift */,
 				A4C5F65E26506E97007A948E /* Constants.swift */,
+				A4C5F66126507045007A948E /* WeatherFetcher.swift */,
 			);
 			path = "i-weather";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C5F66226507045007A948E /* WeatherFetcher.swift in Sources */,
 				A4C5F64F26506A5B007A948E /* SearchViewController.swift in Sources */,
 				A4C5F64C26506A06007A948E /* MasterTabBarVC.swift in Sources */,
 				A4C5F63426506850007A948E /* AppDelegate.swift in Sources */,
