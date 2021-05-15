@@ -17,7 +17,7 @@ class SearchViewController:UIViewController,UISearchBarDelegate{
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         var cityName = searchBar.text?.lowercased()
-        
+        print(getURL(city: cityName!))
         //Call API here
     }
 }
