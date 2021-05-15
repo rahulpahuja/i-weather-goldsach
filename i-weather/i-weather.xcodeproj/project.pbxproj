@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		A4C5F63B26506850007A948E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C5F63926506850007A948E /* Main.storyboard */; };
 		A4C5F63D26506852007A948E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C5F63C26506852007A948E /* Assets.xcassets */; };
 		A4C5F64026506852007A948E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C5F63E26506852007A948E /* LaunchScreen.storyboard */; };
+		A4C5F64C26506A06007A948E /* MasterTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5F64B26506A06007A948E /* MasterTabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A4C5F63C26506852007A948E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4C5F63F26506852007A948E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4C5F64126506852007A948E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4C5F64B26506A06007A948E /* MasterTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarVC.swift; sourceTree = "<group>"; };
 		DCBFD82BD48181A51161CBAE /* Pods_i_weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_i_weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				50EE85EAB1EACD74BB0C45C3 /* Pods-i-weather.debug.xcconfig */,
 				75D1CC50C8B5FB4051286F71 /* Pods-i-weather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				A4C5F63C26506852007A948E /* Assets.xcassets */,
 				A4C5F63E26506852007A948E /* LaunchScreen.storyboard */,
 				A4C5F64126506852007A948E /* Info.plist */,
+				A4C5F64B26506A06007A948E /* MasterTabBarVC.swift */,
 			);
 			path = "i-weather";
 			sourceTree = "<group>";
@@ -206,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C5F64C26506A06007A948E /* MasterTabBarVC.swift in Sources */,
 				A4C5F63826506850007A948E /* ViewController.swift in Sources */,
 				A4C5F63426506850007A948E /* AppDelegate.swift in Sources */,
 				A4C5F63626506850007A948E /* SceneDelegate.swift in Sources */,
