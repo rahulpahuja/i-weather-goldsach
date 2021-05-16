@@ -10,7 +10,7 @@ import Foundation
 
 private let API_KEY_PREFIX = "&appid="
 private let API_KEY = "ac650a4ef2dd18bbe68554fb16e846eb"
-private let BASE_URL = "api.openweathermap.org/data/2.5/weather?q="
+private let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q="
 
 
 public func getURL(city:String)->String{

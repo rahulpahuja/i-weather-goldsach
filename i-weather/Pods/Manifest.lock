@@ -1,24 +1,20 @@
 PODS:
   - Alamofire (5.4.3)
   - IQKeyboardManagerSwift (6.5.6)
-  - SWXMLHash (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - IQKeyboardManagerSwift
-  - SWXMLHash (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManagerSwift
-    - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
 
-PODFILE CHECKSUM: b67003883edeb7eac5c7ca699546d70ea5622c38
+PODFILE CHECKSUM: 2ec4660e75d1d167360f8c9a46cbf5f5d278abbb
 
 COCOAPODS: 1.10.1

@@ -10,9 +10,9 @@ import Alamofire
 
 class WeatherFetcher{
     public static func getWeather(path:String){
-        let url = URL(fileURLWithPath: path)
-        AF.request(url).responseJSON { (data) in
-            print(data.data)
+        AF.request(path).responseJSON { (data) in
+        
+            print(data.data!)
         }
     }
 }
