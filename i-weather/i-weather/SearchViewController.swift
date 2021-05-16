@@ -16,13 +16,15 @@ class SearchViewController:UIViewController,UISearchBarDelegate{
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        let path = getURL(city: searchBar.text?.lowercased()!)
+        let cityName = searchBar.text?.lowercased()
+        let path = getURL(city: cityName!)
         print(path)
         WeatherFetcher.getWeather(path: path)
         //Call API here
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let path = getURL(city: searchBar.text?.lowercased()!)
+        let cityName = searchBar.text?.lowercased()
+        let path = getURL(city: cityName!)
         print(path)
         WeatherFetcher.getWeather(path: path)
     }

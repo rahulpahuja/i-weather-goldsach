@@ -11,7 +11,14 @@ import Alamofire
 class WeatherFetcher{
     public static func getWeather(path:String){
         AF.request(path).responseJSON { (data) in
-        
+            do{
+                let welcome = try? JSONDecoder().decode(Welcome.self, from: data.data!)
+                print(welcome)
+            }catch let error{
+                print(error.localizedDescription)
+            }
+            
+            
             print(data.data!)
         }
     }
