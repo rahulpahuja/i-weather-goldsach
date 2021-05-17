@@ -56,10 +56,10 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataS
                 cell.value.text = "\(Float(value!  - BASE))°c"
                 break
             case 3:
-                cell.value.text = String((SearchViewController.weather?.main.pressure)!)
+                cell.value.text = "\(String((SearchViewController.weather?.main.pressure)!)) n/m2"
                 break
             case 4:
-                cell.value.text = String((SearchViewController.weather?.main.humidity)!)
+                cell.value.text = "\(String((SearchViewController.weather?.main.humidity)!))gm/cm3"
                 break
             default:
                 
