@@ -16,6 +16,7 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataS
     //This can be improved with a closure
     static var weather:Welcome?
     
+    @IBOutlet weak var sunImageView: UIImageView!
     @IBOutlet weak var temperatureUnitLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -114,6 +115,7 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataS
         cityNameLabel.isHidden = value
         temperatureLabel.isHidden = value
         detailsTableView.isHidden = value
+        sunImageView.isHidden = value
     }
     
     

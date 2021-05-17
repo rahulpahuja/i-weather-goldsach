@@ -83,6 +83,7 @@
                                                 <constraint firstItem="few-dp-aqh" firstAttribute="centerY" secondItem="6P4-ij-Z5j" secondAttribute="centerY" id="VTO-qg-OYj"/>
                                                 <constraint firstItem="P7w-7V-qku" firstAttribute="trailing" secondItem="6P4-ij-Z5j" secondAttribute="trailingMargin" id="WAn-hh-crD"/>
                                                 <constraint firstItem="few-dp-aqh" firstAttribute="leading" secondItem="6P4-ij-Z5j" secondAttribute="leadingMargin" constant="13" id="XnP-jF-c5a"/>
+                                                <constraint firstItem="P7w-7V-qku" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="few-dp-aqh" secondAttribute="trailing" constant="8" symbolic="YES" id="f3W-0C-2nf"/>
                                                 <constraint firstItem="P7w-7V-qku" firstAttribute="centerY" secondItem="6P4-ij-Z5j" secondAttribute="centerY" id="pEb-KE-7MG"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -93,6 +94,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="Tx0-fb-smz">
+                                <rect key="frame" x="117" y="157" width="180" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2o2-qY-h4J"/>
+                                    <constraint firstAttribute="width" constant="180" id="6qF-g5-0ys"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="stg-A4-a8j"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -102,11 +110,14 @@
                             <constraint firstItem="bEv-l2-o6I" firstAttribute="centerX" secondItem="qrs-S6-neR" secondAttribute="centerX" id="NSQ-Hj-LpX"/>
                             <constraint firstItem="gtT-pN-dht" firstAttribute="top" secondItem="bEv-l2-o6I" secondAttribute="bottom" constant="-31" id="TcR-0a-c3V"/>
                             <constraint firstItem="bEv-l2-o6I" firstAttribute="top" secondItem="HdQ-bS-0l5" secondAttribute="bottom" constant="33" id="Trw-p2-dzJ"/>
+                            <constraint firstItem="Tx0-fb-smz" firstAttribute="centerX" secondItem="qrs-S6-neR" secondAttribute="centerX" id="clP-Zl-w6Q"/>
                             <constraint firstItem="Lym-0L-DfE" firstAttribute="top" secondItem="qrs-S6-neR" secondAttribute="top" constant="48" id="gIZ-wM-3CN"/>
                             <constraint firstItem="gtT-pN-dht" firstAttribute="leading" secondItem="stg-A4-a8j" secondAttribute="leading" id="h3z-2a-6WT"/>
+                            <constraint firstItem="Tx0-fb-smz" firstAttribute="centerX" secondItem="qrs-S6-neR" secondAttribute="centerX" id="hhT-nN-32F"/>
                             <constraint firstItem="HdQ-bS-0l5" firstAttribute="centerX" secondItem="qrs-S6-neR" secondAttribute="centerX" id="mTn-vq-7nb"/>
                             <constraint firstAttribute="bottom" secondItem="gtT-pN-dht" secondAttribute="bottom" id="noe-cg-uAK"/>
                             <constraint firstItem="gtT-pN-dht" firstAttribute="trailing" secondItem="stg-A4-a8j" secondAttribute="trailing" id="pkC-qO-5y0"/>
+                            <constraint firstItem="Tx0-fb-smz" firstAttribute="top" secondItem="HdQ-bS-0l5" secondAttribute="bottom" constant="3" id="smY-u0-lxE"/>
                             <constraint firstItem="Lym-0L-DfE" firstAttribute="leading" secondItem="qrs-S6-neR" secondAttribute="leading" constant="12" id="snV-I5-4q1"/>
                         </constraints>
                     </view>
@@ -115,6 +126,7 @@
                         <outlet property="cityNameLabel" destination="HdQ-bS-0l5" id="d9E-fi-ipJ"/>
                         <outlet property="detailsTableView" destination="gtT-pN-dht" id="XRf-lr-G5s"/>
                         <outlet property="searchBar" destination="Lym-0L-DfE" id="Jsg-68-FYc"/>
+                        <outlet property="sunImageView" destination="Tx0-fb-smz" id="33d-qx-ibm"/>
                         <outlet property="temperatureLabel" destination="bEv-l2-o6I" id="dEV-O9-WWI"/>
                     </connections>
                 </viewController>
@@ -142,6 +154,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sun" width="1018" height="994"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
