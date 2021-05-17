@@ -14,6 +14,7 @@ class WeatherFetcher{
             do{
                 let welcome = try? JSONDecoder().decode(Welcome.self, from: data.data!)
                 print(welcome)
+                SearchViewController.weather = welcome
             }catch let error{
                 print(error.localizedDescription)
             }
