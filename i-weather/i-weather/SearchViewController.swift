@@ -21,7 +21,7 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataS
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var detailsTableView: UITableView!
-    let properties = ["Current","Min","Max","Pressure","Humidity"]
+    let properties = ["Current Temperature","Min Temperature","Max Temperature","Pressure","Humidity"]
     let BASE:Double = 273
     
     
@@ -37,7 +37,7 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataS
             cityNameLabel.text = SearchViewController.weather?.name
             
             let value = SearchViewController.weather?.main.temp
-            temperatureLabel.text = "\(String(value!  - BASE))c"
+            temperatureLabel.text = "\(Float(value!  - BASE))°c"
             switch indexPath.row{
             case 0:
                 cell.value.text = String((SearchViewController.weather?.main.temp)!)

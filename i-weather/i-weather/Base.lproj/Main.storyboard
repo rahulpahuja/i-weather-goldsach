@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Favourite-->
         <scene sceneID="9K0-Q2-hUZ">
             <objects>
-                <viewController storyboardIdentifier="favouriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yo2-Sl-tRT" customClass="FavouriteViewController" customModule="i_weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="favouriteViewController" title="Favourite" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yo2-Sl-tRT" customClass="FavouriteViewController" customModule="i_weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pPU-gP-tim">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-439" y="713"/>
         </scene>
-        <!--Item 1-->
+        <!--Search-->
         <scene sceneID="5dS-r1-x3q">
             <objects>
-                <viewController storyboardIdentifier="searchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3OF-hD-s9g" customClass="SearchViewController" customModule="i_weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchViewController" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3OF-hD-s9g" customClass="SearchViewController" customModule="i_weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qrs-S6-neR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
