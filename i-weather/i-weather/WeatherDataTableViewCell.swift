@@ -7,8 +7,9 @@
 
 import UIKit
 
-class WeatherDataCollectionViewCell: UICollectionViewCell {
+class WeatherDataTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var value: UILabel!
+    
     @IBOutlet weak var property: UILabel!
+    @IBOutlet weak var value: UILabel!
 }

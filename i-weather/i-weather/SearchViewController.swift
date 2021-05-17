@@ -7,22 +7,37 @@
 
 import UIKit
 
-class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionViewDataSource,UICollectionViewDelegate{
+class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
     
     //This can be improved with a closure
     static var weather:Welcome?
     
+    @IBOutlet weak var temperatureUnitLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var detailsCollectionView: UICollectionView!
+    @IBOutlet weak var detailsTableView: UITableView!
     let properties = ["Current","Min","Max","Pressure","Humidity"]
-    let BASE = 273
+    let BASE:Double = 273
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = detailsCollectionView.dequeueReusableCell(withReuseIdentifier: "dataViewCell", for: indexPath)
-            as! WeatherDataCollectionViewCell
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =
+            detailsTableView.dequeueReusableCell(withIdentifier: "dataViewCell", for:indexPath)
+            
+            as! WeatherDataTableViewCell
+            
         
         cell.property.text = properties[indexPath.row]
         if SearchViewController.weather != nil{
+            cityNameLabel.text = SearchViewController.weather?.name
+            
+            let value = SearchViewController.weather?.main.temp
+            temperatureLabel.text = "\(String(value!  - BASE))c"
             switch indexPath.row{
             case 0:
                 cell.value.text = String((SearchViewController.weather?.main.temp)!)
@@ -48,25 +63,23 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionView
         return cell
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        detailsCollectionView.delegate = self
-        detailsCollectionView.dataSource = self
+        detailsTableView.delegate = self
+        detailsTableView.dataSource = self
+        shouldHideControls(value: true)
         
         
     }
     
-    //Number of Items in a section
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
     
-
     //Number of Sections in Row
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+
     //Gets called when the search bar text is edited and stopeed
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         let cityName = searchBar.text?.lowercased()
@@ -74,7 +87,8 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionView
         //print(path)
         //Call API here
         WeatherFetcher.getWeather(path: path)
-        detailsCollectionView.reloadData()
+        detailsTableView.reloadData()
+        shouldHideControls(value: false)
     }
     //Gets Called when the Editing of the Text in the Search bar begins
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -82,7 +96,8 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionView
         let path = getURL(city: cityName!)
         //print(path)
         WeatherFetcher.getWeather(path: path)
-        detailsCollectionView.reloadData()
+        detailsTableView.reloadData()
+        shouldHideControls(value: false)
     }
     
     //Gets Called when the Search Button of the is clicked
@@ -91,6 +106,15 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionView
         let path = getURL(city: cityName!)
         //print(path)
         WeatherFetcher.getWeather(path: path)
-        detailsCollectionView.reloadData()
+        detailsTableView.reloadData()
+        shouldHideControls(value: false)
     }
+    
+    func shouldHideControls(value:Bool){
+        cityNameLabel.isHidden = value
+        temperatureLabel.isHidden = value
+        detailsTableView.isHidden = value
+    }
+    
+    
 }
