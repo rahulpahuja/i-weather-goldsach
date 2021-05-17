@@ -9,8 +9,11 @@ import UIKit
 
 class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionViewDataSource,UICollectionViewDelegate{
     
+    //This can be improved with a closure
     static var weather:Welcome?
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var detailsCollectionView: UICollectionView!
     let properties = ["Current","Min","Max","Pressure","Humidity"]
     let BASE = 273
     
@@ -42,13 +45,9 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionView
             }
             
         }
-        //cell.value.text =
         return cell
     }
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var detailsCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -58,41 +57,39 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UICollectionView
         
     }
     
+    //Number of Items in a section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
 
-    
+    //Number of Sections in Row
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-    
-    
-    
-    
+    //Gets called when the search bar text is edited and stopeed
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         let cityName = searchBar.text?.lowercased()
         let path = getURL(city: cityName!)
-        print(path)
-        WeatherFetcher.getWeather(path: path)
+        //print(path)
         //Call API here
+        WeatherFetcher.getWeather(path: path)
         detailsCollectionView.reloadData()
     }
-    
+    //Gets Called when the Editing of the Text in the Search bar begins
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         let cityName = searchBar.text?.lowercased()
         let path = getURL(city: cityName!)
-        print(path)
+        //print(path)
         WeatherFetcher.getWeather(path: path)
         detailsCollectionView.reloadData()
     }
     
+    //Gets Called when the Search Button of the is clicked
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let cityName = searchBar.text?.lowercased()
         let path = getURL(city: cityName!)
-        print(path)
+        //print(path)
         WeatherFetcher.getWeather(path: path)
         detailsCollectionView.reloadData()
     }
