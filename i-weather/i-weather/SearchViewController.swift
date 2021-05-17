@@ -41,13 +41,19 @@ class SearchViewController:UIViewController,UISearchBarDelegate,UITableViewDataS
             temperatureLabel.text = "\(Float(value!  - BASE))°c"
             switch indexPath.row{
             case 0:
-                cell.value.text = String((SearchViewController.weather?.main.temp)!)
+                let value = SearchViewController.weather?.main.temp
+                cell.value.text = "\(Float(value!  - BASE))°c"
+                
+                
+                
                 break
             case 1:
-                cell.value.text = String((SearchViewController.weather?.main.tempMin)!)
+                let value = SearchViewController.weather?.main.tempMin
+                cell.value.text = "\(Float(value!  - BASE))°c"
                 break
             case 2:
-                cell.value.text = String((SearchViewController.weather?.main.tempMax)!)
+                let value = SearchViewController.weather?.main.tempMax
+                cell.value.text = "\(Float(value!  - BASE))°c"
                 break
             case 3:
                 cell.value.text = String((SearchViewController.weather?.main.pressure)!)
