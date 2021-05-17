@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="XmI-U7-fCq"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="bqN-Zo-Tuq"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star.fill" catalog="system" id="bqN-Zo-Tuq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZR-iA-byv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +121,7 @@
                             <constraint firstItem="Lym-0L-DfE" firstAttribute="leading" secondItem="qrs-S6-neR" secondAttribute="leading" constant="12" id="snV-I5-4q1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="g2Y-KP-NMS"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="g2Y-KP-NMS"/>
                     <connections>
                         <outlet property="cityNameLabel" destination="HdQ-bS-0l5" id="d9E-fi-ipJ"/>
                         <outlet property="detailsTableView" destination="gtT-pN-dht" id="XRf-lr-G5s"/>
@@ -154,6 +154,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="sun" width="1018" height="994"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
